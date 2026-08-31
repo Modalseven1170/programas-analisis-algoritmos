@@ -33,4 +33,4 @@ entrada.pack(pady=10)
 bot= tk.Button(root, text="saludar")
 bot.pack(pady=10)
 '''
-root.mainloop()
+#root.mainloop()
