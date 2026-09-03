@@ -1,3 +1,5 @@
+import time as t
+
 def bubble_sort(arr):
     n = len(arr)
 
