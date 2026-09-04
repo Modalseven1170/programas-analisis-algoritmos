@@ -1,6 +1,6 @@
 import random as rd 
 listas = []
-N= [30]
+N= [20]
 def genera(n, min, max):
     return [rd.randint(min, max) for i in range(n)]
 
