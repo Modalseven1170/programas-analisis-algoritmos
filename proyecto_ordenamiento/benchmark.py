@@ -30,7 +30,7 @@ print("Lista ordenada:", ordenamientos.selection_sort(numeros))
 Tfin_ssort=time.time()
 tiempos_selection_sort.append(Tfin_ssort - Tini_ssort)
 print("Tiempos de ejecución (s):", tiempos_selection_sort)
-'''
+
 numeros = []
 Tini_ssort=time.time()
 print("Lista ordenada:", ordenamientos.bubble_sort_brute_force(numeros))
@@ -51,4 +51,3 @@ print("Lista ordenada:", ordenamientos.gnome_sort(numeros))
 Tfin_ssort=time.time()
 tiempos_gnome_sort.append(Tfin_ssort - Tini_ssort)
 print("Tiempos de ejecución (s):", tiempos_gnome_sort)
-'''
