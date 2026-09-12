@@ -4,8 +4,12 @@ import matplotlib.pyplot as plt
 
 t_sort=[]
 t_bubble=[]
+t_insertion=[]
+t_gnome=[]
+t_exchange=[]
 N=[]
-def selection_sort(arr):
+def selection_sort(lista):
+    arr = lista.copy()
     n = len(arr)
     for i in range(n - 1):
         # Suponemos que el primer elemento no ordenado es el menor
@@ -19,15 +23,15 @@ def selection_sort(arr):
     return arr
 
 
-def bubble_sort_brute_force(arr):
+def bubble_sort(lista):
+    arr = lista.copy()
     n = len(arr)
-    # Ciclo externo corre n veces de forma fija
+
     for i in range(n):
-        # Ciclo interno compara elementos adyacentes
-        for j in range(0, n - 1):
-            if arr[j] > arr[j + 1]:
-                # Intercambio de elementos
-                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+        for j in range(0, n-1-1):
+
+            if arr[j] > arr[j+1]:
+                arr[j], arr[j+1] = arr[j+1], arr[j]
     return arr
 
 
@@ -81,7 +85,6 @@ l (Low / Izquierda): Es el índice inicial (límite inferior) de la sublista act
 h (High / Derecha): Es el índice final (límite superior) de la sublista actual.
 Ejemplo de uso stooge_sort_rec(arr, 0, len(arr) - 1)
 '''
-
 
 def stooge_sort_rec(arr, l, h):
     if l >= h:
