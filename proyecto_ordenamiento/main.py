@@ -10,17 +10,27 @@ def grafica():
     algoritmo_3 = [1.5300000086426735e-05, 3.590000051190145e-05, 6.570000005012844e-05, 8.709999929124024e-05, 0.00013559999933931977]
     algoritmo_4 = [3.229999856557697e-05, 9.489999865763821e-05, 0.00017389999993611127, 0.00022630000057688449, 0.0003935999993700534]
     algoritmo_5 = [2.0600000425474718e-05, 5.149999924469739e-05, 0.0001156999987870222, 0.00014270000065153, 0.0002106000010826392]
-    #'''
+    '''
     algoritmo_6=[0.0014154000000417, 0.003038599999854341, 0.009608699998352677, 0.009081700000024284, 0.024853900000380236]
+    '''
+    algoritmo_7=[4.530000023805769e-05, 6.010000015521655e-05, 8.870000010574586e-05, 0.00030379999998331186, 0.00036570000020219595]
+    algoritmo_8=[3.5600000046542846e-05, 5.779999992228113e-05, 8.66999998834217e-05, 0.0002496000001883658, 0.00020839999979216373]
+
+
     n = [30,50,70,90,110]
-    #'''
+    
     plt.plot(n, algoritmo_1, marker="o", label="Selection Sort")
     plt.plot(n, algoritmo_2, marker="o", label="Bubble Sort")
     plt.plot(n, algoritmo_3, marker="o", label="Insertion Sort")
     plt.plot(n, algoritmo_4, marker="o", label="Gnome Sort")
     plt.plot(n, algoritmo_5, marker="o", label="Exchange Sort")
-    #'''
+    plt.plot(n, algoritmo_7, marker="o", label="Merge Sort")
+    plt.plot(n, algoritmo_8, marker="o", label="Quick Sort")
+
+
+    '''
     plt.plot(n, algoritmo_6, marker="o", label="Stooge Sort")
+    '''
     plt.title("Comparación de algoritmos")
     plt.xlabel("Tamaño de entrada n")
     plt.ylabel("Tiempo de ejecución (s)")

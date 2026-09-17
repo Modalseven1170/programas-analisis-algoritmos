@@ -8,7 +8,9 @@ tiempos_insertion_sort=[]
 tiempos_gnome_sort=[]
 tiempos_exchange_sort=[]
 tiempos_stooge_sort=[]
-
+tiempos_merge_sort=[]
+tiempos_quick_sort=[]
+listatemp=[]
 def genera(n, min_val, max_val):
     return [rd.randint(min_val, max_val) for i in range(n)]
 
@@ -59,7 +61,7 @@ for n in tamanos:
     print("Lista ordenada:", resultado_esort)
     tiempos_exchange_sort.append(Tfin_esort - Tini_esort)
     print("Tiempos de ejecución (s):", tiempos_exchange_sort)
-    #'''
+    '''
     numeros = lista.copy()
     Tini_stooge = time.perf_counter()
     resultado_stooge = ordenamientos.stooge_sort(numeros) 
@@ -67,3 +69,19 @@ for n in tamanos:
     print("Lista ordenada (Stooge):", resultado_stooge)
     tiempos_stooge_sort.append(Tfin_stooge - Tini_stooge)
     print("Tiempos de ejecución (s):", tiempos_stooge_sort)
+    '''
+    numeros = lista.copy()
+    Tini_merge = time.perf_counter()
+    resultado_merge = ordenamientos.merge_sort(numeros) 
+    Tfin_merge = time.perf_counter()
+    print("Lista ordenada (Merge):", resultado_merge)
+    tiempos_merge_sort.append(Tfin_merge - Tini_merge)
+    print("Tiempos de ejecución (s):", tiempos_merge_sort)
+
+    numeros = lista.copy()
+    Tini_quick = time.perf_counter()
+    resultado_quick = ordenamientos.merge_sort(numeros) 
+    Tfin_quick = time.perf_counter()
+    print("Lista ordenada (Quick):", resultado_quick)
+    tiempos_quick_sort.append(Tfin_quick - Tini_quick)
+    print("Tiempos de ejecución (s):", tiempos_quick_sort)
