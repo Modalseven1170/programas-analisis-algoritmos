@@ -1,4 +1,5 @@
 import time
+import tracemalloc
 
 
 def fibonacci(n):
@@ -16,9 +17,18 @@ def fibonacci(n):
 if __name__ == "__main__":
     n = int(input("Ingresa el valor de n: "))
 
+    # 1) Medir el tiempo (sin tracemalloc para no alterar el resultado)
     inicio = time.perf_counter()
     resultado = fibonacci(n)
     fin = time.perf_counter()
 
+    # 2) Medir el espacio (pico de memoria usado durante la ejecución)
+    tracemalloc.start()
+    fibonacci(n)
+    _, pico = tracemalloc.get_traced_memory()
+    tracemalloc.stop()
+
     print(f"Fibonacci({n}) = {resultado}")
     print(f"Tiempo de ejecución: {fin - inicio:.6f} segundos")
+    print(f"Espacio usado (pico de memoria): {pico} bytes ({pico / 1024:.2f} KB)")
+    print(f"Complejidad de espacio: O(n), la tabla guarda {n + 1} valores")
